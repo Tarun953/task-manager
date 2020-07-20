@@ -1,0 +1,83 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #8f8e8c;
+	font-size: 25px;
+}
+
+h1{
+	font-size: 120%;
+	text-align: center;
+}
+
+.hello{
+	width: 60%;
+	margin-left: 10%;
+	margin-right: 30px;
+	padding: 8px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+}
+
+.box{
+	width: 60%;
+	margin-left: 20%;
+	background-color: #7d7979;
+	margin-top: 100px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+}
+
+.box button[type=submit]{
+	font-size: 50%;
+	width: 100px;
+	padding: 4px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	transition: background-color 0.2s, color 0.2s, font-size 0.2s;
+}
+
+.box button[type=submit]:hover{
+    background-color: #4e664e;
+    font-size: 70%;
+	color: #38f254;
+}
+
+.delete-btn{
+	width: 10%;
+	padding: 4px;
+	margin-left: 400px;
+	text-align:center;
+	border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: color 0.2s, font-size 0.2s, background-color 0.2s;
+}
+.delete-btn:hover{
+    font-size: 60%;
+    color: #38f254;
+    background-color: #4e664e;
+}
+
+
+li{
+	display: inline-block;
+	list-style: none;
+	width: 60%;
+}
+
+ul a:link,
+ul a:visited{
+    margin-right: 30px;
+    color: #8ee691;
+    text-decoration: none;
+    transition: color 0.2s, font-size 0.2s;
+}
+ul a:active,
+ul a:hover{
+    color: #4e664e;
+	font-size: 102%;
+}
+
+.complete{
+    text-decoration: line-through;
+}
