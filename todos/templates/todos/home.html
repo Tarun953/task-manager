@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'todos/style.css' %}">
+</head>
+<body>
+	<div class='box'>
+		<h1>Task Manager</h1>
+		<form action="{% url 'add' %}" method="POST">
+        {% csrf_token %}
+			{{form.text}}
+	        <button type="submit">Add</button>
+		</form>
+        <form action="{% url 'deleteall' %}" method='POST'>
+        {% csrf_token %}
+		    <button class="delete-btn">Delete All</button>
+        </form>
+		<hr>
+		<ul>
+            {% for x in mytodo %}
+                {% if x.completed %}
+                    <li class="complete ">{{x.todotext}}</li><a href="{% url 'incomplete' x.id %}">Mark Incomplete</a><a href="{% url 'delete' x.id %}">Delete</a><br>
+                {% else %}
+                    <li>{{x.todotext}}</li><a href="{%url 'complete' x.id %}">Mark Complete       </a><a href="{% url 'delete' x.id %}">Delete</a><br>
+                {% endif %}
+            {% endfor %}
+		</ul>
+
+	</div>
+
+</body>
+</html>
+
